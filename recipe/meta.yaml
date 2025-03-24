@@ -17,12 +17,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.10
     - setuptools-scm
     - toml
   run:
     - networkx
-    - python >=3.7
+    - python >=3.10
+    - flatten-dict
 
 test:
   imports:
@@ -44,3 +45,4 @@ extra:
   recipe-maintainers:
     - janosg
     - tobiasraabe
+    - timmens
