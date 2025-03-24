@@ -18,7 +18,8 @@ requirements:
   host:
     - pip
     - python >=3.10
-    - setuptools-scm
+    - hatchling
+    - hatch-vcs
     - toml
   run:
     - networkx
