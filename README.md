@@ -148,5 +148,6 @@ Feedstock Maintainers
 =====================
 
 * [@janosg](https://github.com/janosg/)
+* [@timmens](https://github.com/timmens/)
 * [@tobiasraabe](https://github.com/tobiasraabe/)
 

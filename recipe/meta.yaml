@@ -1,5 +1,6 @@
 {% set name = "dags" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dags-{{ version }}.tar.gz
-  sha256: 8c3ec87b51e8db7f69787ae5c5a57499c8ab0242026d5c9a26c27999c8c7bf06
+  sha256: 21e42990c655c0a73e3e07c0a7d40da7af57a22494a4713bb357c12ae50a9f85
 
 build:
   noarch: python
@@ -17,13 +18,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
     - hatchling
     - hatch-vcs
     - toml
   run:
     - networkx
-    - python >=3.10
+    - python >={{ python_min }}
     - flatten-dict
 
 test:
@@ -33,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/OpenSourceEconomics/dags
