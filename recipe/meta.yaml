@@ -1,6 +1,6 @@
 {% set name = "dags" %}
 {% set version = "0.5.0" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -21,9 +21,8 @@ requirements:
     - python {{ python_min }}
     - hatchling
     - hatch-vcs
-    - toml
   run:
-    - networkx
+    - networkx >=3.6
     - python >={{ python_min }}
     - flatten-dict
 
@@ -49,3 +48,4 @@ extra:
     - janosg
     - tobiasraabe
     - timmens
+    - hmgaudecker
