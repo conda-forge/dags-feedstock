@@ -1,6 +1,6 @@
 {% set name = "dags" %}
-{% set version = "0.4.3" %}
-{% set python_min = "3.10" %}
+{% set version = "0.5.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dags-{{ version }}.tar.gz
-  sha256: ac2df6a733501c86de47266bbe7cbb3cf11750c9e268243780669c0ba62306b9
+  sha256: 00bf1b4efcf8eeb5b229bb2dae66d8b4759b746cd41e363314a57ee1466aef07
 
 build:
   noarch: python
@@ -21,9 +21,8 @@ requirements:
     - python {{ python_min }}
     - hatchling
     - hatch-vcs
-    - toml
   run:
-    - networkx
+    - networkx >=3.6
     - python >={{ python_min }}
     - flatten-dict
 
@@ -49,3 +48,4 @@ extra:
     - janosg
     - tobiasraabe
     - timmens
+    - hmgaudecker
