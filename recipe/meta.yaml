@@ -1,5 +1,5 @@
 {% set name = "dags" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dags-{{ version }}.tar.gz
-  sha256: 21b870915d437f41e187b08c9c25503cbb87f90b2844ea13e74a59e9523b4b07
+  sha256: 7fe8be3bca2aea6ad85937f1b21ac3629e4d2300237b99c6e057bb78a0f5f997
 
 build:
   noarch: python
